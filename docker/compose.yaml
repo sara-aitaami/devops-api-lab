@@ -1,0 +1,19 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+
+  db:
+    image: postgres:17
+
+    environment:
+      POSTGRES_USER: sara
+      POSTGRES_PASSWORD: motdepasse123
+      POSTGRES_DB: devopsdb
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
