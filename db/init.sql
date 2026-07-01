@@ -1,0 +1,4 @@
+CREATE TABLE taches (
+    id SERIAL PRIMARY KEY,
+    nom TEXT NOT NULL
+);

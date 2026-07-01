@@ -11,5 +11,8 @@ jobs:
       - name: Télécharger le code
         uses: actions/checkout@v4
 
+      - name: Construire l'image Docker
+        run: docker build -f docker/Dockerfile -t nebulaforge-api .
+
       - name: Afficher un message
         run: echo "Le pipeline fonctionne !"
